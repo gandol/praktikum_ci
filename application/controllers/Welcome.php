@@ -7,6 +7,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 	public function say(){
-		echo "hello there";
+		$this->load->view('nama_saya');
 	}
 }
