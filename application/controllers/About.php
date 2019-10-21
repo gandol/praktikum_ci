@@ -6,4 +6,5 @@ class About extends CI_Controller {
 	{
 		$this->load->view('nama_saya');
 	}
+	
 }
