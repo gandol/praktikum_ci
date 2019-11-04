@@ -16,8 +16,11 @@ class Welcome extends CI_Controller {
 		$var_kirim =([
 			'data_toko_kirim' => $data
 		]);
-
+		
+		//templating
+		$this->load->view('header');
 		$this->load->view('welcome_message',$var_kirim);
+		$this->load->view('footer');
 	}
 	public function say(){
 		$this->load->view('nama_saya');
