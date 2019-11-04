@@ -1,12 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Selamat datang di CodeIgniter</title>
-</head>
 <body>
 <table border='1'>
 	<?php
@@ -21,4 +15,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	?>
 </table>
 </body>
-</html>
