@@ -8,6 +8,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>Selamat datang di CodeIgniter</title>
 </head>
 <body>
-	<h1>Praktikum Codeigniter</h1>
+<table border='1'>
+	<?php
+	foreach ($data_toko_kirim as $data) {
+		?>
+			<tr>
+				<td><?= $data->kode ?></td>
+				<td><?= $data->nama_toko?></td>
+			</tr>
+		<?php
+	}
+	?>
+</table>
 </body>
 </html>

@@ -13,10 +13,11 @@ class Welcome extends CI_Controller {
 	{
 		// print_r($this->mode_pertama->ambilData());
 		$data = $this->model_pertama->getdata();
-		foreach($data as $toko){
-			echo $toko->nama_toko."<br>";
-		}
-		// $this->load->view('welcome_message');
+		$var_kirim =([
+			'data_toko_kirim' => $data
+		]);
+
+		$this->load()->view('welcome_mesaage',$var_kirim);
 	}
 	public function say(){
 		$this->load->view('nama_saya');
