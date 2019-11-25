@@ -6,12 +6,12 @@ class Welcome extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('url');
 		$this->load->model('model_pertama');
 	}
 
 	public function index()
 	{
-		// print_r($this->mode_pertama->ambilData());
 		$data = $this->model_pertama->getdata();
 		$var_kirim =([
 			'data_toko_kirim' => $data
@@ -22,7 +22,19 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message',$var_kirim);
 		$this->load->view('footer');
 	}
-	public function say(){
-		$this->load->view('nama_saya');
+	public function masuk(){
+		$this->load->view('header');
+		$this->load->view('form_login');
+		$this->load->view('footer');
+	}
+
+	public function aksi_masuk(){
+		$email = $this->input->post('email');
+	}
+
+	public function registrasi(){
+		$this->load->view('header');
+		$this->load->view('form_regis');
+		$this->load->view('footer');
 	}
 }
