@@ -37,4 +37,8 @@ class Welcome extends CI_Controller {
 		$this->load->view('form_regis');
 		$this->load->view('footer');
 	}
+
+	public function testingbos(){
+		
+	}
 }
